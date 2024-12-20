@@ -1,0 +1,88 @@
+{
+    /*
+     * Basic Layout and Settings
+     */
+
+    "layer": "top", // bar > windows
+    "position": "left", // location of bar
+
+    "width": 60,
+
+    "modules-left": ["hyprland/workspaces", "mpris"],
+    "modules-center": ["clock"],
+    "modules-right": ["network", "wireplumber"],
+
+    "reload_style_on_change": true,
+
+    /*
+     * Module Settings
+     */
+
+    // Left Modules
+
+    "hyprland/workspaces": {
+        "format": "󱓼"
+    },
+
+    // TODO
+    "mpris": {
+        "format": "{player_icon} {title} - {artist}",
+        "format-paused": "{status_icon} {title} - {artist}",
+        "tooltip-format": "{status_icon} {title} - {artist} - {player}",
+
+        "status-icons": {
+            "paused": "󰏤",
+            "playing": "󰎈"
+        },
+
+        "player-icons": {
+            "default": "󰎈",
+            "io": "󰫔",
+            "firefox": ""
+        },
+
+        "max-length": 30,
+        "rotate": 90
+    },
+
+    // Center Modules
+
+    "clock": {
+        "on-click": "~/.config/hypr/scripts/toggle_wofi.sh",
+        "format": "{:%I\n%M}", // 12-hour format
+        "tooltip-format": "{:%A, %B %d, %Y (%I:%M %p)}"
+    },
+
+    // Right Modules
+
+    // TODO
+    "network": {
+        "format": "",
+        "format-wifi": "󱄙",
+        "format-ethernet": "󰈀",
+
+        "tooltip-format": "{signaldBm}dBm {essid} {frequency}GHz",
+
+        "on-click": "foot -a floatterm -e nmtui",
+        "on-click-right": "nm-connection-editor"
+    },
+
+    // TODO
+    "wireplumber": {
+        "format": "{icon}  {volume}",
+        "format-icons": ["", "", ""],
+        "format-muted": "",
+
+        "max-volume": 100,
+
+        "reverse-scrolling": true,
+        "scroll-step": 5,
+
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-click-right": "pwvucontrol",
+
+        "ignored-sinks": ["Easy Effects Sink"],
+
+        "rotate": 90
+    }
+}

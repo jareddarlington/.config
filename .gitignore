@@ -1,0 +1,8 @@
+# Ignore configs I don't want public
+/*
+!.gitignore
+!/alacritty/
+!/dunst/
+!/fastfetch/
+!/hypr/
+!/waybar/

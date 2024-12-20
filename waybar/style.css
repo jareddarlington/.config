@@ -1,0 +1,72 @@
+/* TODO: comment and organize */
+
+/* NOTE: Set language mode to Less in VS Code */
+
+@define-color background #ffffff;
+@define-color border #21322e;
+@define-color mpris_active #d3d3b2;
+@define-color workspace_active #111111;
+@define-color default_text #383838;
+
+/*
+ * Main Styling
+ */
+
+* {
+    font-family: Fira Code Nerd Font;
+    font-size: 18px;
+
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+window#waybar {
+    background: @background;
+    border: 2px solid @border;
+}
+
+/*
+ * Left Modules
+ */
+
+#workspaces {
+    background-color: @background;
+    border: 2px solid @border;
+    margin-left: 6px;
+    margin-right: 6px;
+    padding-top: 8px;
+
+    margin-top: 3px;
+    margin-bottom: 6px;
+    font-size: 18px;
+    padding-bottom: 6px;
+}
+
+#workspaces button.active {
+    color: alpha(@default_text, 0.7);
+    text-shadow: 3px 3px @workspace_active;
+}
+
+#mpris {
+    background: @background;
+    border: 2px solid @border;
+
+    font-size: 16px;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    margin-left: 6px;
+    margin-right: 6px;
+
+    transition: 0.5s;
+}
+
+#mpris.playing {
+    background: @mpris_active;
+    border: 2px solid @border;
+}
+
+/*
+ * Right Modules
+ */
