@@ -7,6 +7,7 @@
     "position": "left", // location of bar
 
     "width": 60,
+    "margin-left": -2, // accounts for border on right side
 
     "modules-left": ["hyprland/workspaces", "mpris"],
     "modules-center": ["clock"],
@@ -71,7 +72,7 @@
     "wireplumber": {
         "format": "{icon}  {volume}",
         "format-icons": ["", "", ""],
-        "format-muted": "",
+        "format-muted": " MT",
 
         "max-volume": 100,
 

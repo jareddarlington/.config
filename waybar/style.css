@@ -4,9 +4,8 @@
 
 @define-color background #ffffff;
 @define-color border #21322e;
-@define-color mpris_active #d3d3b2;
-@define-color workspace_active #111111;
-@define-color default_text #383838;
+@define-color active #d3d3b2;
+@define-color text #383838;
 
 /*
  * Main Styling
@@ -18,11 +17,13 @@
 
     margin-top: 2px;
     margin-bottom: 2px;
+
+    color: @text;
 }
 
 window#waybar {
     background: @background;
-    border: 2px solid @border;
+    border-right: 2px solid @border;
 }
 
 /*
@@ -32,19 +33,21 @@ window#waybar {
 #workspaces {
     background-color: @background;
     border: 2px solid @border;
+
     margin-left: 6px;
     margin-right: 6px;
-    padding-top: 8px;
 
     margin-top: 3px;
-    margin-bottom: 6px;
-    font-size: 18px;
+    margin-bottom: 3px;
+
+    padding-top: 6px;
     padding-bottom: 6px;
+
+    border-radius: 6px;
 }
 
 #workspaces button.active {
-    color: alpha(@default_text, 0.7);
-    text-shadow: 3px 3px @workspace_active;
+    text-shadow: 3px 3px @active;
 }
 
 #mpris {
@@ -60,13 +63,69 @@ window#waybar {
     margin-right: 6px;
 
     transition: 0.5s;
+
+    border-radius: 6px;
 }
 
 #mpris.playing {
-    background: @mpris_active;
+    background: @active;
     border: 2px solid @border;
+}
+
+/*
+ * Center Modules
+ */
+
+#clock {
+    background-color: @background;
+    border: 2px solid @border;
+
+    margin-left: 6px;
+    margin-right: 6px;
+
+    margin-top: 3px;
+    margin-bottom: 3px;
+
+    padding-top: 6px;
+    padding-bottom: 6px;
+
+    border-radius: 6px;
 }
 
 /*
  * Right Modules
  */
+
+#network {
+    background-color: @background;
+    border: 2px solid @border;
+
+    margin-left: 6px;
+    margin-right: 6px;
+
+    margin-top: 3px;
+    margin-bottom: 3px;
+
+    padding-top: 6px;
+    padding-bottom: 6px;
+
+    border-radius: 6px;
+
+    padding-right: 3px; // centers icon
+}
+
+#wireplumber {
+    background-color: @background;
+    border: 2px solid @border;
+
+    margin-left: 6px;
+    margin-right: 6px;
+
+    margin-top: 3px;
+    margin-bottom: 3px;
+
+    padding-top: 6px;
+    padding-bottom: 6px;
+
+    border-radius: 6px;
+}
