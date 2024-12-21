@@ -22,8 +22,8 @@
 }
 
 window#waybar {
-    background: @background;
-    border-right: 2px solid @border;
+    background-color: @background;
+    border: 2px solid @border;
 }
 
 /*
@@ -51,7 +51,7 @@ window#waybar {
 }
 
 #mpris {
-    background: @background;
+    background-color: @background;
     border: 2px solid @border;
 
     font-size: 16px;
@@ -111,7 +111,7 @@ window#waybar {
 
     border-radius: 6px;
 
-    padding-right: 3px; // centers icon
+    padding-right: 3px;
 }
 
 #wireplumber {
