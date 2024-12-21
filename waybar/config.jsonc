@@ -3,7 +3,7 @@
      * Basic Layout and Settings
      */
 
-    "layer": "bottom", // bar < windows
+    "layer": "top", // bar < windows
     "position": "top", // location of bar
 
     // "margin-top": -1, // accounts for border on bottom
