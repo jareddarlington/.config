@@ -3,14 +3,15 @@
      * Basic Layout and Settings
      */
 
-    "layer": "bottom", // bar < windows
-    "position": "top", // location of bar
+    "layer": "top", // bar > windows
+    "position": "left", // location of bar
 
-    "margin-top": -1, // accounts for border on bottom
+    "width": 60,
+    "margin-left": -2, // accounts for border on right side
 
     "modules-left": ["hyprland/workspaces", "mpris"],
     "modules-center": ["clock"],
-    "modules-right": ["bluetooth", "network", "wireplumber"],
+    "modules-right": ["network", "wireplumber"],
 
     "reload_style_on_change": true,
 
@@ -24,8 +25,8 @@
         "format": "󱓼"
     },
 
+    // TODO
     "mpris": {
-        // TODO: add margins later and remove spaces on sides
         "format": "{player_icon} {title} - {artist}",
         "format-paused": "{status_icon} {title} - {artist}",
         "tooltip-format": "{status_icon} {title} - {artist} - {player}",
@@ -41,40 +42,33 @@
             "firefox": ""
         },
 
-        "max-length": 50
+        "max-length": 30,
+        "rotate": 90
     },
 
     // Center Modules
 
     "clock": {
-        "format": "{:%I:%M}", // 12-hour format
+        "on-click": "~/.config/hypr/scripts/toggle_wofi.sh",
+        "format": "{:%I\n%M}", // 12-hour format
         "tooltip-format": "{:%A, %B %d, %Y (%I:%M %p)}"
     },
 
     // Right Modules
 
     // TODO
-    "bluetooth": {
-        "format": "",
-        "on-click": "blueman-manager",
-        "format-connected": "    {device_alias}",
-        "format-connected-battery": " {device_alias} {device_battery_percentage}%",
-        "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
-        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
-        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-        "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
-    },
-
     "network": {
         "format": "",
-        "format-wifi": "",
-        "format-ethernet": "",
+        "format-wifi": "󰖩",
+        "format-ethernet": "󰈀",
 
         "tooltip-format": "{signaldBm}dBm {essid} {frequency}GHz",
 
-        "on-click": "nm-connection-editor"
+        "on-click": "foot -a floatterm -e nmtui",
+        "on-click-right": "nm-connection-editor"
     },
 
+    // TODO
     "wireplumber": {
         "format": "{icon}  {volume}",
         "format-icons": ["", "", ""],
@@ -86,6 +80,10 @@
         "scroll-step": 5,
 
         "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-        "on-click-right": "pwvucontrol"
+        "on-click-right": "pwvucontrol",
+
+        "ignored-sinks": ["Easy Effects Sink"],
+
+        "rotate": 90
     }
 }

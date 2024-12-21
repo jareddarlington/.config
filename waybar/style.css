@@ -1,11 +1,4 @@
-/* TODO: comment and organize */
-
-/* NOTE: Set language mode to Less in VS Code */
-
-@define-color background #ffffff;
-@define-color border #21322e;
-@define-color active #d3d3b2;
-@define-color text #383838;
+/* TODO: grab colors from gtk or make them constant */
 
 /*
  * Main Styling
@@ -13,17 +6,22 @@
 
 * {
     font-family: Fira Code Nerd Font;
-    font-size: 18px;
+    font-size: 14px;
 
-    margin-top: 2px;
-    margin-bottom: 2px;
+    min-height: 20px;
+}
 
-    color: @text;
+#window {
+    background: transparent;
+    color: transparent;
+    transition: none;
 }
 
 window#waybar {
-    background-color: @background;
-    border: 2px solid @border;
+    color: #000000; /* font color */
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 0px 0px 0px 0px;
+    border-bottom: 1px solid rgba(100, 100, 100, 0.5);
 }
 
 /*
@@ -31,101 +29,83 @@ window#waybar {
  */
 
 #workspaces {
-    background-color: @background;
-    border: 2px solid @border;
-
-    margin-left: 6px;
-    margin-right: 6px;
-
-    margin-top: 3px;
-    margin-bottom: 3px;
-
-    padding-top: 6px;
-    padding-bottom: 6px;
-
-    border-radius: 6px;
+    margin-left: 15px;
+    margin-right: 0px;
 }
 
 #workspaces button.active {
-    text-shadow: 3px 3px @active;
+    text-shadow: 3px 3px rgba(53, 187, 41, 0.699);
 }
 
 #mpris {
-    background-color: @background;
-    border: 2px solid @border;
+    background-color: rgba(0, 0, 0, 0.05);
 
-    font-size: 16px;
+    border-radius: 10px 10px 10px 10px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
 
-    padding-top: 10px;
-    padding-bottom: 10px;
+    margin-left: 5px;
 
-    margin-left: 6px;
-    margin-right: 6px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 
-    transition: 0.5s;
-
-    border-radius: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 #mpris.playing {
-    background: @active;
-    border: 2px solid @border;
+    background-color: rgba(69, 197, 30, 0.301);
+    border: 1px solid rgba(53, 187, 41, 0.699);
 }
 
 /*
  * Center Modules
  */
 
-#clock {
-    background-color: @background;
-    border: 2px solid @border;
-
-    margin-left: 6px;
-    margin-right: 6px;
-
-    margin-top: 3px;
-    margin-bottom: 3px;
-
-    padding-top: 6px;
-    padding-bottom: 6px;
-
-    border-radius: 6px;
-}
-
 /*
  * Right Modules
  */
 
+#bluetooth {
+    background-color: rgba(0, 0, 0, 0.05);
+
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 10px 0px 0px 10px;
+    border-right: transparent;
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 #network {
-    background-color: @background;
-    border: 2px solid @border;
+    background-color: rgba(0, 0, 0, 0.05);
 
-    margin-left: 6px;
-    margin-right: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 0px 10px 10px 0px;
+    border-left: transparent;
 
-    margin-top: 3px;
-    margin-bottom: 3px;
+    margin-right: 5px;
 
-    padding-top: 6px;
-    padding-bottom: 6px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 
-    border-radius: 6px;
-
-    padding-right: 3px;
+    padding-left: 3px; /* offset to account for wifi icon misalignment */
+    padding-right: 10px;
 }
 
 #wireplumber {
-    background-color: @background;
-    border: 2px solid @border;
+    background-color: rgba(0, 0, 0, 0.05);
 
-    margin-left: 6px;
-    margin-right: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 10px 10px 10px 10px;
 
-    margin-top: 3px;
-    margin-bottom: 3px;
+    margin-right: 15px;
 
-    padding-top: 6px;
-    padding-bottom: 6px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 
-    border-radius: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
