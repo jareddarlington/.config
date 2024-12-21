@@ -6,7 +6,7 @@
     "layer": "bottom", // bar < windows
     "position": "top", // location of bar
 
-    "margin-top": -1, // accounts for border on bottom
+    // "margin-top": -1, // accounts for border on bottom
 
     "modules-left": ["hyprland/workspaces", "mpris"],
     "modules-center": ["clock"],

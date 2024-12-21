@@ -7,8 +7,7 @@
 * {
     font-family: Fira Code Nerd Font;
     font-size: 14px;
-
-    min-height: 20px;
+    min-height: 18px;
 }
 
 #window {
@@ -21,7 +20,7 @@ window#waybar {
     color: #000000; /* font color */
     background: rgba(255, 255, 255, 0.5);
     border-radius: 0px 0px 0px 0px;
-    border-bottom: 1px solid rgba(100, 100, 100, 0.5);
+    /* border-bottom: 1px solid rgba(100, 100, 100, 0.5); */
 }
 
 /*
