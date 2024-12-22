@@ -20,7 +20,7 @@
 
 window#waybar {
     color: #000000; /* font color */
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0);
     border-radius: 0px 0px 0px 0px;
     /* border-bottom: 1px solid rgba(100, 100, 100, 0.5); */
 }
@@ -70,6 +70,36 @@ window#waybar {
  * Right Modules
  */
 
+#cpu {
+    background-color: rgba(0, 0, 0, 0.05);
+
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 10px 0px 0px 10px;
+    border-right: transparent;
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
+#memory {
+    background-color: rgba(0, 0, 0, 0.05);
+
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 0px 10px 10px 0px;
+    border-left: transparent;
+
+    margin-right: 5px;
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    padding-left: 5px;
+    padding-right: 10px;
+}
+
 #bluetooth {
     background-color: rgba(0, 0, 0, 0.05);
 
@@ -96,8 +126,8 @@ window#waybar {
     margin-top: 5px;
     margin-bottom: 5px;
 
-    padding-left: 3px; /* offset to account for wifi icon misalignment */
-    padding-right: 10px;
+    padding-left: 0px; /* offset to account for wifi icon misalignment */
+    padding-right: 15px;
 }
 
 #wireplumber {
