@@ -37,7 +37,7 @@ A hybrid between Windows, MacOS, and custom keybinds.
 | <kbd>Super</kbd> + <kbd>P</kbd> | toggle pseudotiling    |
 | <kbd>Super</kbd> + <kbd>J</kbd> | toggle split layout    |
 
-### Workspaces (#: 1 - 10)
+### Workspaces
 
 | Keys                                               | Action                             |
 | :------------------------------------------------- | :--------------------------------- |
