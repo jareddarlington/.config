@@ -23,8 +23,8 @@ A hybrid between Windows, MacOS, and custom keybinds.
 
 | Keys                                              | Action              |
 | :------------------------------------------------ | :------------------ |
-| <kbd>Super</kbd>                                  | launch menu         |
-| <kbd>Super</kbd> + <kbd>Q</kbd>                   | launch terminal     |
+| <kbd>Super</kbd>                                  | open/close menu     |
+| <kbd>Super</kbd> + <kbd>Q</kbd>                   | open terminal       |
 | <kbd>Super</kbd> + <kbd>M</kbd>                   | take screenshot     |
 | <kbd>Alt</kbd> + <kbd>Tab</kbd>                   | focus next window   |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>W</kbd> | close active window |
