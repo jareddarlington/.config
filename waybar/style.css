@@ -8,6 +8,7 @@
     font-family: Fira Code Nerd Font;
     font-size: 14px;
     min-height: 18px;
+    font-weight: 500;
 }
 
 #window {
@@ -59,6 +60,10 @@ window#waybar {
 /*
  * Center Modules
  */
+
+#clock {
+    font-weight: bold;
+}
 
 /*
  * Right Modules
