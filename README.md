@@ -11,17 +11,41 @@ Configuration files from my (desktop) Linux system, which I use for school and c
 -   [waybar](https://github.com/Alexays/Waybar): highly customizable Wayland bar for Sway and Wlroots based compositors.
 -   many more tools not included in this repository.
 
-## Current State
+## Current State (12/21/24)
 
 <img src="./assets/12-21-24_14:16:06.png" width="100%"/>
 
 ## Keybinds
 
+A hybrid between Windows, MacOS, and custom keybinds.
+
 ### General
 
-| Keys                            | Action                     |
-| :------------------------------ | :------------------------- |
-| <kbd>Super</kbd>                | launch menu                |
-| <kbd>Super</kbd> + <kbd>Q</kbd> | launch terminal            |
-| <kbd>Super</kbd> + <kbd>M</kbd> | take screenshot            |
-| <kbd>Super</kbd> + <kbd></kbd>  | quit active/focused window |
+| Keys                                              | Action              |
+| :------------------------------------------------ | :------------------ |
+| <kbd>Super</kbd>                                  | launch menu         |
+| <kbd>Super</kbd> + <kbd>Q</kbd>                   | launch terminal     |
+| <kbd>Super</kbd> + <kbd>M</kbd>                   | take screenshot     |
+| <kbd>Alt</kbd> + <kbd>Tab</kbd>                   | focus next window   |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>W</kbd> | close active window |
+
+### Window Management
+
+| Keys                            | Action                 |
+| :------------------------------ | :--------------------- |
+| <kbd>Super</kbd> + <kbd>V</kbd> | toggle floating window |
+| <kbd>Super</kbd> + <kbd>P</kbd> | toggle pseudotiling    |
+| <kbd>Super</kbd> + <kbd>J</kbd> | toggle split layout    |
+
+### Workspaces (#: 1 - 10)
+
+| Keys                                               | Action                             |
+| :------------------------------------------------- | :--------------------------------- |
+| <kbd>Super</kbd> + <kbd>#</kbd>                    | switch to # workspace              |
+| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>#</kbd> | move current window to # workspace |
+| <kbd>Super</kbd> + <kbd>Left Click</kbd>           | move window                        |
+| <kbd>Super</kbd> + <kbd>Right Click</kbd>          | resize window                      |
+
+\* # represents a number (1-10).
+
+\* Use 0 for workspace 10.
