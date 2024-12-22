@@ -1,6 +1,6 @@
-# Arch Linux and Hyprland Configuration Files
+# Arch Linux and Hyprland Config Files
 
-Configuration files from my (desktop) Linux system, which I use for school and coding. Inspired by [this](https://github.com/luyu-wu/Config), among other configs.
+Configuration files for my (desktop) Linux system, which I use for school and coding. Inspired by [this](https://github.com/luyu-wu/Config), among other configs.
 
 ## What I Use
 
