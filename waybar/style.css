@@ -7,8 +7,9 @@
 * {
     font-family: Fira Code Nerd Font;
     font-size: 14px;
-    min-height: 18px;
     font-weight: 500;
+
+    min-height: 18px;
 }
 
 #window {
