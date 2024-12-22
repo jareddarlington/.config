@@ -2,6 +2,10 @@
 
 Configuration files for my (desktop) Linux system, which I use for school and coding. Inspired by [this](https://github.com/luyu-wu/Config), among other configs.
 
+## Current State (12/21/24)
+
+<img src="./assets/12-21-24_14:16:06.png" width="100%"/>
+
 ## What I Use
 
 -   [alacritty](https://github.com/alacritty/alacritty): a cross-platform, OpenGL terminal emulator.
@@ -10,10 +14,6 @@ Configuration files for my (desktop) Linux system, which I use for school and co
 -   [hyprland](https://hyprland.org/): an independent, highly customizable, dynamic tiling Wayland compositor that doesn't sacrifice on its looks.
 -   [waybar](https://github.com/Alexays/Waybar): highly customizable Wayland bar for Sway and Wlroots based compositors.
 -   many more tools not included in this repository.
-
-## Current State (12/21/24)
-
-<img src="./assets/12-21-24_14:16:06.png" width="100%"/>
 
 ## Keybinds
 
