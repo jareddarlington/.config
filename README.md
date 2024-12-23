@@ -17,7 +17,7 @@ Config files for my (desktop) Linux system, which I use for school and coding.
 
 ## Keybinds
 
-I use a hybrid between Windows, MacOS, and custom keybinds.
+I use a combination of Windows, MacOS, and custom keybinds.
 
 ### General
 
