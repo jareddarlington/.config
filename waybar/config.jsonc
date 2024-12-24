@@ -1,14 +1,10 @@
 {
-    // TODO: add tray and other system info
-
     /*
      * Basic Layout and Settings
      */
 
     "layer": "top", // bar < windows
     "position": "top", // location of bar
-
-    // "margin-top": -1, // accounts for border on bottom
 
     "modules-left": ["hyprland/workspaces", "mpris"],
     "modules-center": ["clock"],
@@ -67,24 +63,29 @@
         "max-length": 10
     },
 
-    // TODO
     "bluetooth": {
-        "format": "",
-        "on-click": "blueman-manager",
-        "format-connected": "    {device_alias}",
-        "format-connected-battery": " {device_alias} {device_battery_percentage}%",
-        "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
-        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
-        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-        "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
+        "format": "󰂯",
+        // "format-connected": "󰂯 {device_alias}",
+        // "format-connected-battery": "󰂯 {device_alias}",
+        "format-disabled": "󰂲",
+
+        "tooltip-format": "{num_connections} connected",
+        "tooltip-format-connected": "{num_connections} connected\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}",
+        "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_battery_percentage}%",
+
+        "on-click": "blueman-manager"
     },
 
     "network": {
         "format": "",
         "format-wifi": "",
         "format-ethernet": "",
+        "format-disconnected": "󰖪",
 
-        "tooltip-format": "{signaldBm}dBm {essid} {frequency}GHz",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": "{ifname}",
+        "tooltip-format-disconnected": "Disconnected",
 
         "on-click": "nm-connection-editor"
     },
