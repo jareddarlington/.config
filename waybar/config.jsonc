@@ -73,6 +73,7 @@
         "tooltip-format-connected": "{num_connections} connected\n\n{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}",
         "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_battery_percentage}%",
+        "tooltip-format-disabled": "Bluetooth disabled",
 
         "on-click": "blueman-manager"
     },
