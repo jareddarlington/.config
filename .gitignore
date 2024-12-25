@@ -10,4 +10,5 @@
 !/assets/
 !/wofi/
 !/rofi/
+!starship.toml
 !README.md
