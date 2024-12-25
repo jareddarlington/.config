@@ -1,10 +1,10 @@
 # Arch Linux and Hyprland Config Files
 
-Config files for my (desktop) Linux system, which I use for school and coding.
+Config files for my desktop Linux system, which I use for school and coding.
 
 ## Current State (12/21/24)
 
-<img src="./assets/12-21-24_14:16:06.png"/>
+<img src="./assets/state.png"/>
 
 ## What I Use
 
