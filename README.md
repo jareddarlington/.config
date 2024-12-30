@@ -2,7 +2,7 @@
 
 Config files for my desktop Linux system, which I use for school and coding.
 
-## Current State (12/21/24)
+## Current State (12/24/24)
 
 <img src="./assets/state.png"/>
 
@@ -12,7 +12,9 @@ Config files for my desktop Linux system, which I use for school and coding.
 -   [dunst](https://github.com/dunst-project/dunst): lightweight and customizable notification daemon.
 -   [fastfetch](https://github.com/fastfetch-cli/fastfetch): a maintained, feature-rich and performance oriented, neofetch like system information tool.
 -   [hyprland](https://hyprland.org/): an independent, highly customizable, dynamic tiling Wayland compositor that doesn't sacrifice on its looks.
+-   [rofi](https://github.com/lbonn/rofi): a window switcher, run dialog and dmenu replacement - fork with wayland support.
 -   [waybar](https://github.com/Alexays/Waybar): highly customizable Wayland bar for Sway and Wlroots based compositors.
+-   [starship](https://starship.rs/): the minimal, blazing-fast, and infinitely customizable prompt for any shell.
 -   other tools not included in this repository.
 
 ## Keybinds
