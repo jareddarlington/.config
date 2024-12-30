@@ -34,7 +34,7 @@ window#waybar {
 }
 
 #workspaces button.active {
-    text-shadow: 3px 3px rgb(118, 159, 240);
+    text-shadow: 3px 3px rgb(154, 209, 130);
 }
 
 #mpris {
@@ -53,8 +53,8 @@ window#waybar {
 }
 
 #mpris.playing {
-    background-color: rgba(118, 159, 240, 0.733);
-    border: 1px solid rgb(118, 159, 240);
+    background-color: rgba(154, 209, 130, 0.76);
+    border: 1px solid rgb(122, 177, 99);
 }
 
 /*
