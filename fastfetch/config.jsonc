@@ -5,6 +5,10 @@
         "padding": {
             "top": 3,
             "left": 2
+        },
+        "color": {
+            "1": "38;2;204;86;79",
+            "2": "38;2;204;86;79"
         }
     },
     "display": {
@@ -17,19 +21,23 @@
         },
         {
             "type": "cpu",
-            "key": "   "
+            "key": "   ",
+            "keyColor": "38;2;204;86;79"
         },
         {
             "type": "gpu",
-            "key": "  󰨇 "
+            "key": "  󰨇 ",
+            "keyColor": "38;2;204;86;79"
         },
         {
             "type": "memory",
-            "key": "   "
+            "key": "   ",
+            "keyColor": "38;2;204;86;79"
         },
         {
             "type": "disk",
-            "key": "   "
+            "key": "   ",
+            "keyColor": "38;2;204;86;79"
         },
         {
             "type": "custom",
@@ -37,23 +45,28 @@
         },
         {
             "type": "os",
-            "key": "   "
+            "key": "   ",
+            "keyColor": "38;2;204;86;79"
         },
         {
             "type": "kernel",
-            "key": "   "
+            "key": "   ",
+            "keyColor": "38;2;204;86;79"
         },
         {
             "type": "wm",
-            "key": "   "
+            "key": "   ",
+            "keyColor": "38;2;204;86;79"
         },
         {
             "type": "shell",
-            "key": "   "
+            "key": "   ",
+            "keyColor": "38;2;204;86;79"
         },
         {
             "type": "packages",
-            "key": "   "
+            "key": "   ",
+            "keyColor": "38;2;204;86;79"
         },
         {
             "type": "custom",

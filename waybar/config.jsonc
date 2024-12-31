@@ -23,7 +23,6 @@
     },
 
     "mpris": {
-        // TODO: add margins later and remove spaces on sides
         "format": "{player_icon} {title} - {artist}",
         "format-paused": "{status_icon} {title} - {artist}",
         "tooltip-format": "{status_icon} {title} - {artist} - {player}",
