@@ -11,9 +11,9 @@ $directory\
 
 \n$character"""
 
-palette = 'tokyo-night'
+palette = 'custom'
 
-[palettes.tokyo-night]
+[palettes.custom]
 color_main = '#b3dca1'
 color_dir = '#d1eac7'
 color_white = '#e3e5e5'
