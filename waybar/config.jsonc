@@ -6,6 +6,8 @@
     "layer": "top", // bar < windows
     "position": "top", // location of bar
 
+    "margin-bottom": -5, // accounts for hyprland window gaps
+
     "modules-left": ["mpris"],
     "modules-center": ["clock"],
     "modules-right": [
