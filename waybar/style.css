@@ -1,0 +1,145 @@
+/* TODO: grab colors from gtk or make them constant */
+
+/*
+ * Main Styling
+ */
+
+* {
+    font-family: Fira Code Nerd Font;
+    font-size: 14px;
+    font-weight: 500;
+
+    min-height: 18px;
+}
+
+#window {
+    background: transparent;
+    color: transparent;
+    transition: none;
+}
+
+window#waybar {
+    color: #000000; /* font color */
+    background: rgba(255, 255, 255, 0);
+    border-radius: 0px 0px 0px 0px;
+}
+
+/*
+ * Left Modules
+ */
+
+#workspaces {
+    margin-left: 15px;
+    margin-right: 0px;
+}
+
+#workspaces button.active {
+    text-shadow: 3px 3px rgb(154, 209, 130);
+}
+
+#mpris {
+    background-color: rgba(0, 0, 0, 0.05);
+
+    border-radius: 10px 10px 10px 10px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+
+    margin-left: 5px;
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#mpris.playing {
+    background-color: rgba(154, 209, 130, 0.76);
+    border: 1px solid rgb(122, 177, 99);
+}
+
+/*
+ * Center Modules
+ */
+
+#clock {
+    font-weight: bold;
+}
+
+/*
+ * Right Modules
+ */
+
+#cpu {
+    background-color: rgba(0, 0, 0, 0.05);
+
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 10px 0px 0px 10px;
+    border-right: transparent;
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
+#memory {
+    background-color: rgba(0, 0, 0, 0.05);
+
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 0px 10px 10px 0px;
+    border-left: transparent;
+
+    margin-right: 5px;
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    padding-left: 5px;
+    padding-right: 10px;
+}
+
+#bluetooth {
+    background-color: rgba(0, 0, 0, 0.05);
+
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 10px 0px 0px 10px;
+    border-right: transparent;
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#network {
+    background-color: rgba(0, 0, 0, 0.05);
+
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 0px 10px 10px 0px;
+    border-left: transparent;
+
+    margin-right: 5px;
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    padding-left: 0px; /* offset to account for wifi icon misalignment */
+    padding-right: 15px;
+}
+
+#wireplumber {
+    background-color: rgba(0, 0, 0, 0.05);
+
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 10px 10px 10px 10px;
+
+    margin-right: 15px;
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    padding-left: 10px;
+    padding-right: 10px;
+}

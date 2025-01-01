@@ -1,0 +1,106 @@
+{
+    /*
+     * Basic Layout and Settings
+     */
+
+    "layer": "top", // bar < windows
+    "position": "top", // location of bar
+
+    "modules-left": ["hyprland/workspaces", "mpris"],
+    "modules-center": ["clock"],
+    "modules-right": ["cpu", "memory", "bluetooth", "network", "wireplumber"],
+
+    "reload_style_on_change": true,
+
+    /*
+     * Module Settings
+     */
+
+    // Left Modules
+
+    "hyprland/workspaces": {
+        "format": "󱓼"
+    },
+
+    "mpris": {
+        "format": "{player_icon} {title} - {artist}",
+        "format-paused": "{status_icon} {title} - {artist}",
+        "tooltip-format": "{status_icon} {title} - {artist} - {player}",
+
+        "status-icons": {
+            "paused": "󰏤",
+            "playing": "󰎈"
+        },
+
+        "player-icons": {
+            "default": "󰎈",
+            "io": "󰫔",
+            "firefox": ""
+        },
+
+        "max-length": 50
+    },
+
+    // Center Modules
+
+    "clock": {
+        "format": "{:%I:%M}", // 12-hour format
+        "tooltip-format": "{:%A, %B %d, %Y (%I:%M %p)}"
+    },
+
+    // Right Modules
+
+    "cpu": {
+        "interval": 10,
+        "format": "CPU {}%",
+        "max-length": 10
+    },
+
+    "memory": {
+        "interval": 30,
+        "format": "RAM {}%",
+        "max-length": 10
+    },
+
+    "bluetooth": {
+        "format": "󰂯",
+        // "format-connected": "󰂯 {device_alias}",
+        // "format-connected-battery": "󰂯 {device_alias}",
+        "format-disabled": "󰂲",
+
+        "tooltip-format": "{num_connections} connected",
+        "tooltip-format-connected": "{num_connections} connected\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}",
+        "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_battery_percentage}%",
+        "tooltip-format-disabled": "Bluetooth disabled",
+
+        "on-click": "blueman-manager"
+    },
+
+    "network": {
+        "format": "",
+        "format-wifi": "",
+        "format-ethernet": "",
+        "format-disconnected": "󰖪",
+
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": "{ifname}",
+        "tooltip-format-disconnected": "Disconnected",
+
+        "on-click": "nm-connection-editor"
+    },
+
+    "wireplumber": {
+        "format": "{icon}  {volume}",
+        "format-icons": ["", "", ""],
+        "format-muted": "  MT",
+
+        "max-volume": 100,
+
+        "reverse-scrolling": true,
+        "scroll-step": 5,
+
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-click-right": "pwvucontrol"
+    }
+}

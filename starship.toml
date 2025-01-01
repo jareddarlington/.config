@@ -1,0 +1,42 @@
+format = """
+[░▒▓](color_main)\
+
+$os\
+
+[](bg:color_dir fg:color_main)\
+
+$directory\
+
+[ ](fg:color_dir)\
+
+\n$character"""
+
+palette = 'custom'
+
+[palettes.custom]
+color_main = '#b3dca1'
+color_dir = '#d1eac7'
+color_white = '#e3e5e5'
+color_black = '#090c0c'
+
+
+[directory]
+style = "fg:color_black bg:color_dir"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[os]
+disabled = false
+style = "bg:color_main fg:color_black"
+
+[os.symbols]
+Windows = " 󰍲 "
+Macos = " 󰀵 "
+Arch = " 󰣇 "
+
+[username]
+show_always = true
+style_user = "bg:color_main fg:color_black"
+style_root = "bg:color_main fg:color_black"
+format = '[ $user ]($style)'

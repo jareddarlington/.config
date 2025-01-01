@@ -1,0 +1,12 @@
+# Ignore configs I don't want public
+/*
+!.gitignore
+!/alacritty/
+!/dunst/
+!/fastfetch/
+!/hypr/
+!/waybar/
+!/assets/
+!/rofi/
+!starship.toml
+!README.md
