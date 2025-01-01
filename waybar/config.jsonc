@@ -6,9 +6,16 @@
     "layer": "top", // bar < windows
     "position": "top", // location of bar
 
-    "modules-left": ["hyprland/workspaces", "mpris"],
+    "modules-left": ["mpris"],
     "modules-center": ["clock"],
-    "modules-right": ["cpu", "memory", "bluetooth", "network", "wireplumber"],
+    "modules-right": [
+        "custom/weather",
+        "cpu",
+        "memory",
+        "bluetooth",
+        "network",
+        "wireplumber"
+    ],
 
     "reload_style_on_change": true,
 
@@ -17,6 +24,11 @@
      */
 
     // Left Modules
+
+    "custom/os": {
+        "exec": "python ~/.config/waybar/scripts/os.py",
+        "return-type": "json"
+    },
 
     "hyprland/workspaces": {
         "format": "󱓼"
@@ -34,7 +46,6 @@
 
         "player-icons": {
             "default": "󰎈",
-            "io": "󰫔",
             "firefox": ""
         },
 
@@ -49,6 +60,13 @@
     },
 
     // Right Modules
+
+    "custom/weather": {
+        "exec": "python ~/.config/waybar/scripts/weather.py",
+        "restart-interval": 300,
+        "return-type": "json",
+        "on-click": "xdg-open https://weather.com/weather/today/l/4bc782df8b53ef6bf89863fb91b82e5c2257063893829110d463f9c4a6062d4e"
+    },
 
     "cpu": {
         "interval": 10,
@@ -91,8 +109,8 @@
     },
 
     "wireplumber": {
-        "format": "{icon}  {volume}",
-        "format-icons": ["", "", ""],
+        "format": "{icon} {volume}",
+        "format-icons": ["", "", " "],
         "format-muted": "  MT",
 
         "max-volume": 100,

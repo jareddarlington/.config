@@ -19,7 +19,7 @@
 }
 
 window#waybar {
-    color: #000000; /* font color */
+    color: #f0f0f0; /* font color */
     background: rgba(255, 255, 255, 0);
     border-radius: 0px 0px 0px 0px;
 }
@@ -28,9 +28,22 @@ window#waybar {
  * Left Modules
  */
 
+#custom-os {
+    margin-left: 5px;
+}
+
 #workspaces {
-    margin-left: 15px;
+    background-color: rgba(0, 0, 0, 0.05);
+
+    border: 2px solid rgba(0, 0, 0, 0.25);
+    border-radius: 10px 10px 10px 10px;
+
+    margin-left: 5px;
     margin-right: 0px;
+}
+
+#workspaces button {
+    color: #f0f0f0; /* font color */
 }
 
 #workspaces button.active {
@@ -61,23 +74,103 @@ window#waybar {
  * Center Modules
  */
 
+/* #clock {
+    font-weight: bold;
+
+    margin-bottom: 5px;
+
+    padding-left: 5px;
+    padding-right: 5px;
+
+    background-color: rgba(0, 0, 0, 0.05);
+
+    border: 2px solid rgba(0, 0, 0, 0.25);
+    border-radius: 0px 0px 10px 10px;
+    border-top: transparent;
+} */
+
 #clock {
     font-weight: bold;
+
+    background-color: rgba(0, 0, 0, 0.05);
+
+    border: 2px solid rgba(0, 0, 0, 0.25);
+    border-radius: 10px 10px 10px 10px;
+
+    margin-right: 5px;
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    padding-top: 2px;
+
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 /*
  * Right Modules
  */
 
+#custom-weather {
+    background-color: rgba(0, 0, 0, 0.05);
+
+    border: 2px solid rgba(0, 0, 0, 0.25);
+    border-radius: 10px 10px 10px 10px;
+
+    margin-right: 5px;
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    padding-top: 2px;
+
+    padding-left: 10px;
+    padding-right: 5px; /* offset to account for icon misalignment */
+}
+
+#custom-weather.default {
+    color: #dbd9d8;
+}
+
+#custom-weather.sunnyDay {
+    color: #c2ca76;
+}
+
+#custom-weather.clearNight {
+    color: #2b2b2a;
+}
+
+#custom-weather.cloudyFoggyDay,
+#custom-weather.cloudyFoggyNight {
+    color: #c2ddda;
+}
+
+#custom-weather.rainyDay,
+#custom-weather.rainyNight {
+    color: #5aaca5;
+}
+
+#custom-weather.showyIcyDay,
+#custom-weather.snowyIcyNight {
+    color: #d6e7e5;
+}
+
+#custom-weather.severe {
+    color: #eb937d;
+}
+
 #cpu {
     background-color: rgba(0, 0, 0, 0.05);
 
-    border: 1px solid rgba(0, 0, 0, 0.25);
+    border: 2px solid rgba(0, 0, 0, 0.25);
     border-radius: 10px 0px 0px 10px;
     border-right: transparent;
 
     margin-top: 5px;
     margin-bottom: 5px;
+
+    padding-top: 2px;
 
     padding-left: 10px;
     padding-right: 5px;
@@ -86,7 +179,7 @@ window#waybar {
 #memory {
     background-color: rgba(0, 0, 0, 0.05);
 
-    border: 1px solid rgba(0, 0, 0, 0.25);
+    border: 2px solid rgba(0, 0, 0, 0.25);
     border-radius: 0px 10px 10px 0px;
     border-left: transparent;
 
@@ -95,6 +188,8 @@ window#waybar {
     margin-top: 5px;
     margin-bottom: 5px;
 
+    padding-top: 2px;
+
     padding-left: 5px;
     padding-right: 10px;
 }
@@ -102,7 +197,7 @@ window#waybar {
 #bluetooth {
     background-color: rgba(0, 0, 0, 0.05);
 
-    border: 1px solid rgba(0, 0, 0, 0.25);
+    border: 2px solid rgba(0, 0, 0, 0.25);
     border-radius: 10px 0px 0px 10px;
     border-right: transparent;
 
@@ -116,7 +211,7 @@ window#waybar {
 #network {
     background-color: rgba(0, 0, 0, 0.05);
 
-    border: 1px solid rgba(0, 0, 0, 0.25);
+    border: 2px solid rgba(0, 0, 0, 0.25);
     border-radius: 0px 10px 10px 0px;
     border-left: transparent;
 
@@ -132,10 +227,10 @@ window#waybar {
 #wireplumber {
     background-color: rgba(0, 0, 0, 0.05);
 
-    border: 1px solid rgba(0, 0, 0, 0.25);
+    border: 2px solid rgba(0, 0, 0, 0.25);
     border-radius: 10px 10px 10px 10px;
 
-    margin-right: 15px;
+    margin-right: 5px;
 
     margin-top: 5px;
     margin-bottom: 5px;
