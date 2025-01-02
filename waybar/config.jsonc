@@ -39,19 +39,19 @@
     "mpris": {
         "format": "{player_icon} {title} - {artist}",
         "format-paused": "{status_icon} {title} - {artist}",
-        "tooltip-format": "{status_icon} {title} - {artist} - {player}",
+        "tooltip-format": "{player_icon} {title} - {artist} - {player}",
 
         "status-icons": {
             "paused": "󰏤",
-            "playing": "󰎈"
+            "playing": "󰐊"
         },
 
         "player-icons": {
-            "default": "󰎈",
-            "firefox": ""
+            "default": "󰝚",
+            "firefox": "󰈹"
         },
 
-        "max-length": 50
+        "max-length": 40
     },
 
     // Center Modules
