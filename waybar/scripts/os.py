@@ -3,7 +3,7 @@
 import json
 
 # available os icons
-os_icons = {"default": "  ", "arch": " 󰣇 "}
+os_icons = {"default": "", "arch": "󰣇"}
 
 # reads os/distro
 try:
