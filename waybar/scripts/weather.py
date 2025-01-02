@@ -52,7 +52,7 @@ icon = weather_icons[status_code] if status_code in weather_icons else weather_i
 
 # temperature feels like
 temp_feel = html_data("div[data-testid='FeelsLikeSection'] > span > span[data-testid='TemperatureValue']").text()
-temp_feel_text = f"Feels like {temp_feel}c"
+temp_feel_text = f"Feels like {temp_feel}"
 # print(temp_feel_text)
 
 # min-max temperature
