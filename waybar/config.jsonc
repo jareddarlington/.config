@@ -13,6 +13,7 @@
     "modules-right": [
         "custom/weather",
         "cpu",
+        "custom/nvidia",
         "memory",
         "bluetooth",
         "network",
@@ -71,13 +72,19 @@
     },
 
     "cpu": {
-        "interval": 10,
+        "interval": 5,
         "format": "CPU {}%",
         "max-length": 10
     },
 
+    "custom/nvidia": {
+        "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,nounits,noheader",
+        "format": "GPU {}%",
+        "interval": 5
+    },
+
     "memory": {
-        "interval": 30,
+        "interval": 5,
         "format": "RAM {}%",
         "max-length": 10
     },
