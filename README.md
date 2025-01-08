@@ -2,7 +2,7 @@
 
 Config files for my desktop Linux system, which I use for school and coding.
 
-## Current State (1/1/25)
+## Current State (1/7/25)
 
 <img src="./assets/state.png"/>
 
