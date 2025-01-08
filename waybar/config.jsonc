@@ -34,8 +34,29 @@
     },
 
     "hyprland/workspaces": {
-        "format": "󱓼"
+        "format": "{icon}",
+        "format-icons": {
+            // "empty": "󱓺",
+            "default": "󱓼"
+        }
     },
+
+    // "hyprland/workspaces": {
+    //     "format": " {windows} "
+    //     // "icon-size": 14,
+    //     // "window-rewrite-default": "",
+    //     // "window-rewrite": {
+    //     //     "class<firefox>": "",
+    //     //     "code": "",
+    //     //     "blackbox-terminal": "",
+    //     //     "evince": "",
+    //     //     "zathura": "",
+    //     //     "libreoffice": ""
+    //     // },
+    //     // "format-icons": {
+    //     //     "default": ""
+    //     // }
+    // },
 
     "mpris": {
         "format": "{player_icon} {title} - {artist}",
