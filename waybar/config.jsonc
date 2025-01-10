@@ -1,4 +1,6 @@
 {
+    // TODO: make repo for my waybar styles
+
     /*
      * Basic Layout and Settings
      */
@@ -8,17 +10,9 @@
 
     "margin-bottom": -5, // accounts for hyprland window gaps
 
-    "modules-left": ["mpris"],
-    "modules-center": ["clock"],
-    "modules-right": [
-        "custom/weather",
-        "cpu",
-        "custom/nvidia",
-        "memory",
-        "bluetooth",
-        "network",
-        "wireplumber"
-    ],
+    "modules-left": ["custom/weather", "mpris"],
+    "modules-center": [],
+    "modules-right": ["bluetooth", "network", "wireplumber", "custom/time"],
 
     "reload_style_on_change": true,
 
@@ -78,16 +72,20 @@
 
     // Center Modules
 
-    "clock": {
-        "format": "{:%I:%M}", // 12-hour format
-        "tooltip-format": "{:%A, %B %d, %Y (%I:%M %p)}"
-    },
+    // "clock": {
+    //     "format": "{:%I:%M}", // 12-hour format
+    //     "tooltip-format": "{:%A, %B %d, %Y (%I:%M %p)}"
+    // },
+
+    // "clock": {
+    //     "format": "{:%a %b %d  %I:%M %p}"
+    // },
 
     // Right Modules
 
     "custom/weather": {
         "exec": "python ~/.config/waybar/scripts/weather.py",
-        "restart-interval": 300,
+        "restart-interval": 60,
         "return-type": "json",
         "on-click": "xdg-open https://weather.com/weather/today/l/4bc782df8b53ef6bf89863fb91b82e5c2257063893829110d463f9c4a6062d4e"
     },
@@ -150,5 +148,11 @@
 
         "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
         "on-click-right": "pwvucontrol"
+    },
+
+    "custom/time": {
+        "format": "{}",
+        "exec": "date '+%a %b %-d %-I:%M %p'",
+        "interval": 60
     }
 }

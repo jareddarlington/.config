@@ -140,7 +140,7 @@ window#waybar {
     border: 2px solid rgba(0, 0, 0, 0.25);
     border-radius: 10px 10px 10px 10px;
 
-    margin-right: 5px;
+    margin-left: 5px;
 
     margin-top: 5px;
     margin-bottom: 5px;
@@ -273,6 +273,23 @@ window#waybar {
 
     margin-top: 5px;
     margin-bottom: 5px;
+
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#custom-time {
+    background-color: rgba(0, 0, 0, 0.05);
+
+    border: 2px solid rgba(0, 0, 0, 0.25);
+    border-radius: 10px 10px 10px 10px;
+
+    margin-right: 5px;
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    padding-top: 2px;
 
     padding-left: 10px;
     padding-right: 10px;
