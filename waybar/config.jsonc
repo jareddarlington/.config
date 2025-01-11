@@ -1,6 +1,8 @@
-{
-    // TODO: make repo for my waybar styles
+/*
+ * Islands - Top
+ */
 
+{
     /*
      * Basic Layout and Settings
      */
@@ -10,47 +12,15 @@
 
     "margin-bottom": -5, // accounts for hyprland window gaps
 
-    "modules-left": ["custom/weather", "mpris"],
-    "modules-center": [],
-    "modules-right": ["bluetooth", "network", "wireplumber", "custom/time"],
+    "modules-left": ["mpris"],
+    "modules-center": ["custom/clock"],
+    "modules-right": ["custom/weather", "bluetooth", "network", "wireplumber"],
 
     "reload_style_on_change": true,
 
     /*
      * Module Settings
      */
-
-    // Left Modules
-
-    "custom/os": {
-        "exec": "python ~/.config/waybar/scripts/os.py",
-        "return-type": "json"
-    },
-
-    "hyprland/workspaces": {
-        "format": "{icon}",
-        "format-icons": {
-            // "empty": "󱓺",
-            "default": "󱓼"
-        }
-    },
-
-    // "hyprland/workspaces": {
-    //     "format": " {windows} "
-    //     // "icon-size": 14,
-    //     // "window-rewrite-default": "",
-    //     // "window-rewrite": {
-    //     //     "class<firefox>": "",
-    //     //     "code": "",
-    //     //     "blackbox-terminal": "",
-    //     //     "evince": "",
-    //     //     "zathura": "",
-    //     //     "libreoffice": ""
-    //     // },
-    //     // "format-icons": {
-    //     //     "default": ""
-    //     // }
-    // },
 
     "mpris": {
         "format": "{player_icon} {title} - {artist}",
@@ -69,19 +39,6 @@
 
         "max-length": 40
     },
-
-    // Center Modules
-
-    // "clock": {
-    //     "format": "{:%I:%M}", // 12-hour format
-    //     "tooltip-format": "{:%A, %B %d, %Y (%I:%M %p)}"
-    // },
-
-    // "clock": {
-    //     "format": "{:%a %b %d  %I:%M %p}"
-    // },
-
-    // Right Modules
 
     "custom/weather": {
         "exec": "python ~/.config/waybar/scripts/weather.py",
@@ -150,7 +107,7 @@
         "on-click-right": "pwvucontrol"
     },
 
-    "custom/time": {
+    "custom/clock": {
         "format": "{}",
         "exec": "date '+%a %b %-d %-I:%M %p'",
         "interval": 60

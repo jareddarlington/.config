@@ -1,7 +1,5 @@
-/* TODO: grab colors from gtk or make them constant */
-
 /*
- * Main Styling
+ * Islands - Top
  */
 
 * {
@@ -25,56 +23,6 @@ window#waybar {
     border-radius: 0px 0px 10px 10px;
 }
 
-/*
- * Left Modules
- */
-
-#custom-os {
-    background-color: rgba(0, 0, 0, 0.05);
-
-    border-radius: 10px 10px 10px 10px;
-    border: 2px solid rgba(0, 0, 0, 0.25);
-
-    margin-left: 5px;
-
-    margin-top: 5px;
-    margin-bottom: 5px;
-
-    padding-top: 2px;
-
-    padding-left: 6px;
-    padding-right: 8px;
-}
-
-#workspaces {
-    background-color: rgba(0, 0, 0, 0.05);
-
-    border-radius: 10px 10px 10px 10px;
-    border: 2px solid rgba(0, 0, 0, 0.25);
-
-    margin-top: 5px;
-    margin-bottom: 5px;
-
-    margin-left: 5px;
-    margin-right: 0px;
-
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
-#workspaces button {
-    color: #ffffff;
-    padding-top: 0;
-    padding-bottom: 0;
-    padding: 0 2px;
-}
-
-#workspaces button.active {
-    text-shadow: 3px 3px rgba(0, 0, 0, 0.233);
-    transition-duration: 0.25s;
-    transition-property: text-shadow;
-}
-
 #mpris {
     background-color: rgba(0, 0, 0, 0.05);
 
@@ -91,10 +39,6 @@ window#waybar {
     padding-left: 10px;
     padding-right: 10px;
 }
-
-/*
- * Center Modules
- */
 
 /* #clock {
     font-weight: bold;
@@ -130,9 +74,24 @@ window#waybar {
     padding-right: 10px;
 }
 
-/*
- * Right Modules
- */
+#custom-clock {
+    font-weight: bold;
+
+    background-color: rgba(0, 0, 0, 0.05);
+
+    border: 2px solid rgba(0, 0, 0, 0.25);
+    border-radius: 10px 10px 10px 10px;
+
+    margin-right: 5px;
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    padding-top: 2px;
+
+    padding-left: 10px;
+    padding-right: 10px;
+}
 
 #custom-weather {
     background-color: rgba(0, 0, 0, 0.05);
@@ -140,7 +99,7 @@ window#waybar {
     border: 2px solid rgba(0, 0, 0, 0.25);
     border-radius: 10px 10px 10px 10px;
 
-    margin-left: 5px;
+    margin-right: 5px;
 
     margin-top: 5px;
     margin-bottom: 5px;
@@ -183,54 +142,12 @@ window#waybar {
 }
 
 #cpu {
-    background-color: rgba(0, 0, 0, 0.05);
-
-    border: 2px solid rgba(0, 0, 0, 0.25);
-    border-radius: 10px 0px 0px 10px;
-    border-right: transparent;
-
-    margin-top: 5px;
-    margin-bottom: 5px;
-
-    padding-top: 2px;
-
-    padding-left: 10px;
-    padding-right: 5px;
 }
 
 #custom-nvidia {
-    background-color: rgba(0, 0, 0, 0.05);
-
-    border: 2px solid rgba(0, 0, 0, 0.25);
-    border-radius: 0px 0px 0px 0px;
-    border-left: transparent;
-    border-right: transparent;
-
-    margin-top: 5px;
-    margin-bottom: 5px;
-
-    padding-top: 2px;
-
-    padding-left: 5px;
-    padding-right: 5px;
 }
 
 #memory {
-    background-color: rgba(0, 0, 0, 0.05);
-
-    border: 2px solid rgba(0, 0, 0, 0.25);
-    border-radius: 0px 10px 10px 0px;
-    border-left: transparent;
-
-    margin-right: 5px;
-
-    margin-top: 5px;
-    margin-bottom: 5px;
-
-    padding-top: 2px;
-
-    padding-left: 5px;
-    padding-right: 10px;
 }
 
 #bluetooth {
@@ -273,23 +190,6 @@ window#waybar {
 
     margin-top: 5px;
     margin-bottom: 5px;
-
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-#custom-time {
-    background-color: rgba(0, 0, 0, 0.05);
-
-    border: 2px solid rgba(0, 0, 0, 0.25);
-    border-radius: 10px 10px 10px 10px;
-
-    margin-right: 5px;
-
-    margin-top: 5px;
-    margin-bottom: 5px;
-
-    padding-top: 2px;
 
     padding-left: 10px;
     padding-right: 10px;
