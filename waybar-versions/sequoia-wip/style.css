@@ -1,0 +1,96 @@
+* {
+    /* font-family: apple-fonts; */
+    font-family: Fira Code Nerd Font;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#window {
+    background: transparent;
+    color: transparent;
+    transition: none;
+}
+
+window#waybar {
+    color: #ffffff;
+    background: transparent;
+}
+
+#mpris {
+    padding-left: 20px;
+    padding-right: 0px;
+}
+
+#custom-weather.default {
+    color: #dbd9d8;
+}
+
+#custom-weather.sunnyDay {
+    color: #eeee22;
+}
+
+#custom-weather.clearNight {
+    color: #2b2b2a;
+}
+
+#custom-weather.cloudyFoggyDay,
+#custom-weather.cloudyFoggyNight {
+    color: #c2ddda;
+}
+
+#custom-weather.rainyDay,
+#custom-weather.rainyNight {
+    color: #5aaca5;
+}
+
+#custom-weather.showyIcyDay,
+#custom-weather.snowyIcyNight {
+    color: #d6e7e5;
+}
+
+#custom-weather.severe {
+    color: #eb937d;
+}
+
+#custom-weather {
+    padding-left: 0px;
+    padding-right: 20px;
+
+    margin-right: -2px;
+}
+
+#cpu {
+}
+
+#custom-gpu {
+}
+
+#memory {
+}
+
+#bluetooth {
+    padding-left: 0px;
+    padding-right: 20px;
+}
+
+#network {
+    padding-left: 0px;
+    padding-right: 20px;
+
+    margin-right: -2px;
+}
+
+#wireplumber {
+    padding-left: 0px;
+    padding-right: 20px;
+}
+
+#custom-temp {
+    padding-left: 0px;
+    padding-right: 20px;
+}
+
+#custom-clock {
+    padding-left: 0px;
+    padding-right: 20px;
+}

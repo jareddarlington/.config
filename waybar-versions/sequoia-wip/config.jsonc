@@ -1,0 +1,126 @@
+/*
+ * MacOS Sequoia Clone
+ */
+
+{
+    /*
+     * Basic Layout and Settings
+     */
+
+    "layer": "top", // bar < windows
+    "position": "top", // location of bar
+
+    "margin-bottom": 0, // accounts for hyprland window gaps
+    "height": 24,
+
+    "modules-left": ["mpris"],
+    "modules-center": [],
+    "modules-right": [
+        "custom/weather",
+        "bluetooth",
+        "network",
+        // "wireplumber",
+        "custom/temp",
+        "custom/clock"
+    ],
+
+    "reload_style_on_change": true,
+
+    /*
+     * Module Settings
+     */
+    "mpris": {
+        "format": "{player_icon} {title} - {artist}",
+        "format-paused": "{status_icon} {title} - {artist}",
+        "tooltip-format": "{player_icon} {title} - {artist} - {player}",
+
+        "status-icons": {
+            "paused": "󰏤",
+            "playing": "󰐊"
+        },
+
+        "player-icons": {
+            "default": "󰝚",
+            "firefox": "󰈹"
+        },
+
+        "max-length": 40
+    },
+
+    "custom/weather": {
+        "exec": "python ~/.config/waybar/scripts/weather.py",
+        "restart-interval": 60,
+        "return-type": "json",
+        "on-click": "xdg-open https://weather.com/weather/today/l/4bc782df8b53ef6bf89863fb91b82e5c2257063893829110d463f9c4a6062d4e"
+    },
+
+    "cpu": {
+        "interval": 5,
+        "format": "CPU {}%",
+        "max-length": 10
+    },
+
+    "custom/gpu": {
+        "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,nounits,noheader",
+        "format": "GPU {}%",
+        "interval": 5
+    },
+
+    "memory": {
+        "interval": 5,
+        "format": "RAM {}%",
+        "max-length": 10
+    },
+
+    "bluetooth": {
+        "format": "󰂯",
+        // "format-connected": "󰂯 {device_alias}",
+        // "format-connected-battery": "󰂯 {device_alias}",
+        "format-disabled": "󰂲",
+
+        "tooltip-format": "{num_connections} connected",
+        "tooltip-format-connected": "{num_connections} connected\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}",
+        "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_battery_percentage}%",
+        "tooltip-format-disabled": "Bluetooth disabled",
+
+        "on-click": "blueman-manager"
+    },
+
+    "network": {
+        "format": "",
+        "format-wifi": " ",
+        "format-ethernet": "",
+        "format-disconnected": "󱘖",
+
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": "{ifname}",
+        "tooltip-format-disconnected": "Disconnected",
+
+        "on-click": "nm-connection-editor"
+    },
+
+    "wireplumber": {
+        "format": "{icon} {volume}",
+        "format-icons": ["", "", " "],
+        "format-muted": "  MT",
+
+        "max-volume": 100,
+
+        "reverse-scrolling": true,
+        "scroll-step": 5,
+
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-click-right": "pwvucontrol"
+    },
+
+    "custom/clock": {
+        "format": "{}",
+        "exec": "date '+%a %b %-d %-I:%M %p'",
+        "interval": 60
+    },
+
+    "custom/temp": {
+        "format": ""
+    }
+}

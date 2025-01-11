@@ -8,5 +8,6 @@
 !/waybar/
 !/assets/
 !/rofi/
+!/waybar-versions/
 !starship.toml
 !README.md
