@@ -10,11 +10,21 @@
     "layer": "top", // bar < windows
     "position": "top", // location of bar
 
-    "margin-bottom": -5, // accounts for hyprland window gaps
+    "margin-bottom": 0, // accounts for hyprland window gaps
+    "height": 28,
 
     "modules-left": ["mpris"],
     "modules-center": ["custom/clock"],
     "modules-right": ["custom/weather", "bluetooth", "network", "wireplumber"],
+    // "modules-right": [
+    //     "custom/weather",
+    //     "cpu",
+    //     "custom/gpu",
+    //     "memory",
+    //     "bluetooth",
+    //     "network",
+    //     "wireplumber"
+    // ],
 
     "reload_style_on_change": true,
 
@@ -53,7 +63,7 @@
         "max-length": 10
     },
 
-    "custom/nvidia": {
+    "custom/gpu": {
         "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,nounits,noheader",
         "format": "GPU {}%",
         "interval": 5

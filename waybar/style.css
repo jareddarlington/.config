@@ -6,108 +6,45 @@
     font-family: Fira Code Nerd Font;
     font-size: 14px;
     font-weight: 500;
-
-    min-height: 18px;
 }
 
 #window {
     background: transparent;
     color: transparent;
     transition: none;
-    border-radius: 0px 0px 10px 10px;
 }
 
 window#waybar {
-    color: #ffffff;
     background: transparent;
-    border-radius: 0px 0px 10px 10px;
+    color: #ffffff;
 }
 
 #mpris {
     background-color: rgba(0, 0, 0, 0.05);
-
-    border-radius: 10px 10px 10px 10px;
     border: 2px solid rgba(0, 0, 0, 0.25);
+    border-radius: 0px 0px 15px 15px;
+    border-top: transparent;
+
+    padding-left: 10px;
+    padding-right: 10px;
+
+    padding-top: 2px;
 
     margin-left: 5px;
-
-    margin-top: 5px;
-    margin-bottom: 5px;
-
-    padding-top: 2px;
-
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-/* #clock {
-    font-weight: bold;
-
-    margin-bottom: 5px;
-
-    padding-left: 5px;
-    padding-right: 5px;
-
-    background-color: rgba(0, 0, 0, 0.05);
-
-    border: 2px solid rgba(0, 0, 0, 0.25);
-    border-radius: 0px 0px 10px 10px;
-    border-top: transparent;
-} */
-
-#clock {
-    font-weight: bold;
-
-    background-color: rgba(0, 0, 0, 0.05);
-
-    border: 2px solid rgba(0, 0, 0, 0.25);
-    border-radius: 10px 10px 10px 10px;
-
-    margin-right: 5px;
-
-    margin-top: 5px;
-    margin-bottom: 5px;
-
-    padding-top: 2px;
-
-    padding-left: 10px;
-    padding-right: 10px;
 }
 
 #custom-clock {
-    font-weight: bold;
-
     background-color: rgba(0, 0, 0, 0.05);
-
     border: 2px solid rgba(0, 0, 0, 0.25);
-    border-radius: 10px 10px 10px 10px;
-
-    margin-right: 5px;
-
-    margin-top: 5px;
-    margin-bottom: 5px;
-
-    padding-top: 2px;
+    border-radius: 0px 0px 15px 15px;
+    border-top: transparent;
 
     padding-left: 10px;
     padding-right: 10px;
-}
-
-#custom-weather {
-    background-color: rgba(0, 0, 0, 0.05);
-
-    border: 2px solid rgba(0, 0, 0, 0.25);
-    border-radius: 10px 10px 10px 10px;
-
-    margin-right: 5px;
-
-    margin-top: 5px;
-    margin-bottom: 5px;
 
     padding-top: 2px;
 
-    padding-left: 10px;
-    padding-right: 5px; /* offset to account for icon misalignment */
+    font-weight: bold;
 }
 
 #custom-weather.default {
@@ -115,7 +52,7 @@ window#waybar {
 }
 
 #custom-weather.sunnyDay {
-    color: #eeee22;
+    color: #d6d63d;
 }
 
 #custom-weather.clearNight {
@@ -141,56 +78,100 @@ window#waybar {
     color: #eb937d;
 }
 
-#cpu {
-}
+#custom-weather {
+    background-color: rgba(0, 0, 0, 0.05);
+    border: 2px solid rgba(0, 0, 0, 0.25);
+    border-radius: 0px 0px 0px 15px;
+    border-top: transparent;
+    border-right: transparent;
 
-#custom-nvidia {
-}
+    padding-left: 10px;
+    padding-right: 5px;
 
-#memory {
+    padding-top: 2px;
 }
 
 #bluetooth {
     background-color: rgba(0, 0, 0, 0.05);
-
     border: 2px solid rgba(0, 0, 0, 0.25);
-    border-radius: 10px 0px 0px 10px;
+    border-radius: 0px 0px 0px 0px;
+    border-top: transparent;
+    border-left: transparent;
     border-right: transparent;
-
-    margin-top: 5px;
-    margin-bottom: 5px;
 
     padding-left: 10px;
     padding-right: 10px;
+
+    padding-top: 2px;
 }
 
 #network {
     background-color: rgba(0, 0, 0, 0.05);
-
     border: 2px solid rgba(0, 0, 0, 0.25);
-    border-radius: 0px 10px 10px 0px;
+    border-radius: 0px 0px 0px 0px;
+    border-top: transparent;
     border-left: transparent;
+    border-right: transparent;
 
-    margin-right: 5px;
-
-    margin-top: 5px;
-    margin-bottom: 5px;
-
-    padding-left: 0px; /* offset to account for wifi icon misalignment */
+    padding-left: 10px;
     padding-right: 15px;
+
+    padding-top: 2px;
 }
 
 #wireplumber {
     background-color: rgba(0, 0, 0, 0.05);
-
     border: 2px solid rgba(0, 0, 0, 0.25);
-    border-radius: 10px 10px 10px 10px;
-
-    margin-right: 5px;
-
-    margin-top: 5px;
-    margin-bottom: 5px;
+    border-radius: 0px 0px 15px 0px;
+    border-top: transparent;
+    border-left: transparent;
 
     padding-left: 10px;
     padding-right: 10px;
+
+    padding-top: 2px;
+
+    margin-right: 5px;
+}
+
+#cpu {
+    background-color: rgba(0, 0, 0, 0.05);
+    border: 2px solid rgba(0, 0, 0, 0.25);
+    border-radius: 0px 0px 0px 0px;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+
+    padding-left: 10px;
+    padding-right: 10px;
+
+    padding-top: 2px;
+}
+
+#custom-gpu {
+    background-color: rgba(0, 0, 0, 0.05);
+    border: 2px solid rgba(0, 0, 0, 0.25);
+    border-radius: 0px 0px 0px 0px;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+
+    padding-left: 0px;
+    padding-right: 0px;
+
+    margin-right: 5px;
+}
+
+#memory {
+    background-color: rgba(0, 0, 0, 0.05);
+    border: 2px solid rgba(0, 0, 0, 0.25);
+    border-radius: 0px 0px 0px 0px;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+
+    padding-left: 10px;
+    padding-right: 10px;
+
+    margin-right: 5px;
 }
