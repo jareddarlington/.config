@@ -159,7 +159,7 @@ window#waybar {
     padding-left: 0px;
     padding-right: 0px;
 
-    margin-right: 5px;
+    padding-top: 2px;
 }
 
 #memory {
@@ -173,5 +173,5 @@ window#waybar {
     padding-left: 10px;
     padding-right: 10px;
 
-    margin-right: 5px;
+    padding-top: 2px;
 }

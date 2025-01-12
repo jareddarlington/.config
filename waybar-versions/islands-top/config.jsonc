@@ -15,16 +15,16 @@
 
     "modules-left": ["mpris"],
     "modules-center": ["custom/clock"],
-    "modules-right": ["custom/weather", "bluetooth", "network", "wireplumber"],
-    // "modules-right": [
-    //     "custom/weather",
-    //     "cpu",
-    //     "custom/gpu",
-    //     "memory",
-    //     "bluetooth",
-    //     "network",
-    //     "wireplumber"
-    // ],
+    // "modules-right": ["custom/weather", "bluetooth", "network", "wireplumber"],
+    "modules-right": [
+        "custom/weather",
+        "cpu",
+        "custom/gpu",
+        "memory",
+        "bluetooth",
+        "network",
+        "wireplumber"
+    ],
 
     "reload_style_on_change": true,
 
