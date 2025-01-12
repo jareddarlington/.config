@@ -8,14 +8,13 @@ Config files for my desktop Linux system, which I use for school and coding.
 
 ## What I Use
 
--   [alacritty](https://github.com/alacritty/alacritty): a cross-platform, OpenGL terminal emulator.
--   [dunst](https://github.com/dunst-project/dunst): lightweight and customizable notification daemon.
--   [fastfetch](https://github.com/fastfetch-cli/fastfetch): a maintained, feature-rich and performance oriented, neofetch like system information tool.
--   [hyprland](https://hyprland.org/): an independent, highly customizable, dynamic tiling Wayland compositor that doesn't sacrifice on its looks.
--   [rofi](https://github.com/lbonn/rofi): a window switcher, run dialog and dmenu replacement - fork with wayland support.
--   [waybar](https://github.com/Alexays/Waybar): highly customizable Wayland bar for Sway and Wlroots based compositors.
--   [starship](https://starship.rs/): the minimal, blazing-fast, and infinitely customizable prompt for any shell.
--   other tools not included in this repository.
+-   Window Manager - [Hyprland](https://hyprland.org/).
+-   Status Bar - [Waybar](https://github.com/Alexays/Waybar).
+-   Terminal Emulator - [Alacritty](https://github.com/alacritty/alacritty).
+-   Shell Prompt - [Starship](https://starship.rs/).
+-   Notification Daemon - [Dunst](https://github.com/dunst-project/dunst).
+-   System Info - [Fastfetch](https://github.com/fastfetch-cli/fastfetch).
+-   App Launcher - [Rofi](https://github.com/lbonn/rofi).
 
 ## Keybinds
 
