@@ -59,7 +59,7 @@
 
     "cpu": {
         "interval": 5,
-        "format": "CPU {}%",
+        "format": "CPU {usage}%",
         "max-length": 10
     },
 
