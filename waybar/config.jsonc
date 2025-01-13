@@ -120,6 +120,6 @@
     "custom/clock": {
         "format": "{}",
         "exec": "date '+%a %b %-d %-I:%M %p'",
-        "interval": 60
+        "interval": 1
     }
 }
