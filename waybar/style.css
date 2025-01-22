@@ -3,9 +3,10 @@
  */
 
 * {
-    font-family: Fira Code Nerd Font;
-    font-size: 14px;
-    font-weight: 500;
+    /* font-family: Fira Code Nerd Font; */
+    font-family: "SF Pro Text", "Times New Roman";
+    font-size: 13px;
+    font-weight: bold;
 }
 
 #window {
@@ -19,32 +20,77 @@ window#waybar {
     color: #ffffff;
 }
 
-#mpris {
-    background-color: rgba(0, 0, 0, 0.05);
+#mpris,
+#custom-clock,
+#custom-weather,
+#bluetooth,
+#network,
+#wireplumber,
+#cpu,
+#custom-gpu,
+#memory {
+    background-color: rgba(0, 0, 0, 0.158);
     border: 2px solid rgba(0, 0, 0, 0.25);
-    border-radius: 0px 0px 15px 15px;
     border-top: transparent;
-
+    padding-top: 0px;
     padding-left: 10px;
     padding-right: 10px;
+}
 
-    padding-top: 2px;
-
+#mpris {
+    border-radius: 0px 0px 15px 15px;
     margin-left: 5px;
 }
 
 #custom-clock {
-    background-color: rgba(0, 0, 0, 0.05);
-    border: 2px solid rgba(0, 0, 0, 0.25);
     border-radius: 0px 0px 15px 15px;
-    border-top: transparent;
+}
 
-    padding-left: 10px;
-    padding-right: 10px;
+#custom-weather {
+    border-radius: 0px 0px 0px 15px;
+    border-right: transparent;
+    padding-right: 5px;
+}
 
-    padding-top: 2px;
+#bluetooth {
+    border-radius: 0px 0px 0px 0px;
+    border-left: transparent;
+    border-right: transparent;
+    font-size: 15;
+}
 
-    font-weight: bold;
+#network {
+    border-radius: 0px 0px 0px 0px;
+    border-left: transparent;
+    border-right: transparent;
+
+    font-size: 20;
+}
+
+#wireplumber {
+    border-radius: 0px 0px 15px 0px;
+    border-left: transparent;
+    margin-right: 5px;
+}
+
+#cpu {
+    border-radius: 0px 0px 0px 0px;
+    border-left: transparent;
+    border-right: transparent;
+}
+
+#custom-gpu {
+    border-radius: 0px 0px 0px 0px;
+    border-left: transparent;
+    border-right: transparent;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#memory {
+    border-radius: 0px 0px 0px 0px;
+    border-left: transparent;
+    border-right: transparent;
 }
 
 #custom-weather.default {
@@ -84,102 +130,4 @@ window#waybar {
 #custom-weather.Patchy-heavy-snow,
 #custom-weather.Heavy-snow {
     color: #d6e7e5;
-}
-
-#custom-weather {
-    background-color: rgba(0, 0, 0, 0.05);
-    border: 2px solid rgba(0, 0, 0, 0.25);
-    border-radius: 0px 0px 0px 15px;
-    border-top: transparent;
-    border-right: transparent;
-
-    padding-left: 10px;
-    padding-right: 5px;
-
-    padding-top: 2px;
-}
-
-#bluetooth {
-    background-color: rgba(0, 0, 0, 0.05);
-    border: 2px solid rgba(0, 0, 0, 0.25);
-    border-radius: 0px 0px 0px 0px;
-    border-top: transparent;
-    border-left: transparent;
-    border-right: transparent;
-
-    padding-left: 10px;
-    padding-right: 10px;
-
-    padding-top: 2px;
-}
-
-#network {
-    background-color: rgba(0, 0, 0, 0.05);
-    border: 2px solid rgba(0, 0, 0, 0.25);
-    border-radius: 0px 0px 0px 0px;
-    border-top: transparent;
-    border-left: transparent;
-    border-right: transparent;
-
-    padding-left: 10px;
-    padding-right: 15px;
-
-    padding-top: 2px;
-}
-
-#wireplumber {
-    background-color: rgba(0, 0, 0, 0.05);
-    border: 2px solid rgba(0, 0, 0, 0.25);
-    border-radius: 0px 0px 15px 0px;
-    border-top: transparent;
-    border-left: transparent;
-
-    padding-left: 10px;
-    padding-right: 10px;
-
-    padding-top: 2px;
-
-    margin-right: 5px;
-}
-
-#cpu {
-    background-color: rgba(0, 0, 0, 0.05);
-    border: 2px solid rgba(0, 0, 0, 0.25);
-    border-radius: 0px 0px 0px 0px;
-    border-top: transparent;
-    border-left: transparent;
-    border-right: transparent;
-
-    padding-left: 10px;
-    padding-right: 10px;
-
-    padding-top: 2px;
-}
-
-#custom-gpu {
-    background-color: rgba(0, 0, 0, 0.05);
-    border: 2px solid rgba(0, 0, 0, 0.25);
-    border-radius: 0px 0px 0px 0px;
-    border-top: transparent;
-    border-left: transparent;
-    border-right: transparent;
-
-    padding-left: 0px;
-    padding-right: 0px;
-
-    padding-top: 2px;
-}
-
-#memory {
-    background-color: rgba(0, 0, 0, 0.05);
-    border: 2px solid rgba(0, 0, 0, 0.25);
-    border-radius: 0px 0px 0px 0px;
-    border-top: transparent;
-    border-left: transparent;
-    border-right: transparent;
-
-    padding-left: 10px;
-    padding-right: 10px;
-
-    padding-top: 2px;
 }
