@@ -84,10 +84,9 @@ if __name__ == "__main__":
         else:
             # Format tooltip text for Waybar
             tooltip_text = str.format(
-                "{}\n{}\n{}",
-                f'<span size="x-large">{temp:.0f}°</span>',
+                "{}\n{}",
+                f'<span size="x-large">{icon} {temp:.0f}°</span>',
                 f"<big>{status}</big>",
-                f"<small>Current condition</small>",
             )
 
             # Waybar module output data
