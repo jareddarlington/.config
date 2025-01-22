@@ -16,7 +16,15 @@
     "modules-left": ["mpris"],
     "modules-center": ["custom/clock"],
     // "modules-right": ["custom/weather", "bluetooth", "network", "wireplumber"],
-    "modules-right": ["custom/weather", "bluetooth", "network", "wireplumber"],
+    "modules-right": [
+        "custom/weather",
+        "cpu",
+        "custom/gpu",
+        "memory",
+        "bluetooth",
+        "network",
+        "wireplumber"
+    ],
 
     "reload_style_on_change": true,
 
@@ -84,7 +92,7 @@
 
     "network": {
         "format": "",
-        "format-wifi": "󰖩",
+        "format-wifi": "󱚾",
         "format-ethernet": "",
         "format-disconnected": "󰖪",
 
@@ -98,7 +106,8 @@
     "wireplumber": {
         "format": "{volume}",
         "format-icons": ["", "", " "],
-        "format-muted": " ",
+        // "format-muted": " ",
+        "format-muted": "Mute",
 
         "max-volume": 100,
 
