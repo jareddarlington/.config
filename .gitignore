@@ -12,3 +12,4 @@
 !starship.toml
 !/wallpapers/
 !README.md
+waybar/scripts/.env

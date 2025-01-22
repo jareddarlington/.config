@@ -52,9 +52,9 @@
 
     "custom/weather": {
         "exec": "python ~/.config/waybar/scripts/weather.py",
-        "restart-interval": 60,
+        "restart-interval": 300,
         "return-type": "json",
-        "on-click": "xdg-open https://weather.com/weather/today/l/4bc782df8b53ef6bf89863fb91b82e5c2257063893829110d463f9c4a6062d4e"
+        "on-click": "gnome-weather"
     },
 
     "cpu": {

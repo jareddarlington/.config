@@ -1,106 +1,102 @@
-#!/usr/bin/env python
-
-# import subprocess # only needed for private location_id env file
-from pyquery import PyQuery
+import requests
+from dotenv import load_dotenv
+import os
 import json
 
-# weather icons
+# Load environment variables from .env file
+# .env file should have format "WEATHER_API_KEY=KEY"
+load_dotenv()
+
+# Fetch the API key from the environment
+API_KEY = os.getenv("WEATHER_API_KEY")
+
+# Base URL for the WeatherAPI current weather endpoint
+BASE_URL = "http://api.weatherapi.com/v1/current.json"
+
+# Location for the weather query
+LOCATION = "Seattle"
+
+# Weather icons
 weather_icons = {
-    "sunnyDay": "",
-    "clearNight": "󰖔",
-    "cloudyFoggyDay": " ",
-    "cloudyFoggyNight": " ",
-    "rainyDay": "",
-    "rainyNight": "",
-    "snowyIcyDay": "",
-    "snowyIcyNight": "",
-    "severe": "",
+    "Sunny": "",
+    "Clear": "󰖔",
+    "Partly cloudy": "󰖐",
+    "Cloudy": "󰖐",
+    "Overcast": "󰖐",
+    "Mist": "",
+    "Light drizzle": "",
+    "Light rain": "",
+    "Moderate rain": "",
+    "Heavy rain": "",
+    "Fog": "",
+    "Patchy light snow": "",
+    "Light snow": "",
+    "Patchy moderate snow": "",
+    "Moderate snow": "",
+    "Patchy heavy snow": "",
+    "Heavy snow": "",
     "default": "",
 }
 
-# get location_id
-# to get your own location_id, go to https://weather.com & search your location.
-# once you choose your location, you can see the location_id in the URL(64 chars long hex string)
-# like this: https://weather.com/en-IN/weather/today/l/c3e96d6cc4965fc54f88296b54449571c4107c73b9638c16aafc83575b4ddf2e
-# or like this for fahrenheit: https://weather.com/weather/today/l/c3e96d6cc4965fc54f88296b54449571c4107c73b9638c16aafc83575b4ddf2e
-location_id = "4bc782df8b53ef6bf89863fb91b82e5c2257063893829110d463f9c4a6062d4e"  # Seattle, WA
 
-# priv_env_cmd = 'cat $PRIV_ENV_FILE | grep weather_location | cut -d "=" -f 2'
-# location_id = subprocess.run(
-#     priv_env_cmd, shell=True, capture_output=True).stdout.decode('utf8').strip()
+def get_current_weather(api_key, location):
+    try:
+        # Build the query URL
+        url = f"{BASE_URL}?key={api_key}&q={location}"
 
-# get html page
-url = "https://weather.com/weather/today/l/" + location_id
-html_data = PyQuery(url=url)
+        # Make the API request
+        response = requests.get(url)
+        response.raise_for_status()  # Raise an error for HTTP issues
 
-# current temperature
-temp = html_data("span[data-testid='TemperatureValue']").eq(0).text()
-# print(temp)
+        # Parse the JSON response
+        data = response.json()
+        current_temp = data["current"]["temp_f"]  # Temperature in Fahrenheit
+        current_condition = data["current"]["condition"]["text"]  # Weather condition
 
-# current status phrase
-status = html_data("div[data-testid='wxPhrase']").text()
-status = f"{status[:16]}.." if len(status) > 17 else status
-# print(status)
+        icon = weather_icons[current_condition] if current_condition in weather_icons else weather_icons["default"]
 
-# status code
-status_code = html_data("#regionHeader").attr("class").split(" ")[2].split("-")[2]
-# print(status_code)
+        return current_temp, current_condition, icon
 
-# status icon
-icon = weather_icons[status_code] if status_code in weather_icons else weather_icons["default"]
-# print(icon)
+    except requests.exceptions.RequestException as e:
+        return None, None, f"Error fetching weather data: {e}"
 
-# temperature feels like
-temp_feel = html_data("div[data-testid='FeelsLikeSection'] > span > span[data-testid='TemperatureValue']").text()
-temp_feel_text = f"Feels like {temp_feel}"
-# print(temp_feel_text)
 
-# min-max temperature
-temp_min = html_data("div[data-testid='wxData'] > span[data-testid='TemperatureValue']").eq(0).text()
-temp_max = html_data("div[data-testid='wxData'] > span[data-testid='TemperatureValue']").eq(1).text()
-temp_min_max = f"  {temp_min}\t\t  {temp_max}"
-# print(temp_min_max)
+# Fetch and print the current weather data in Seattle
+if __name__ == "__main__":
+    if not API_KEY:
+        out_data = {
+            "text": "Error",
+            "alt": "API key missing",
+            "tooltip": "API key missing",
+            "class": "ERROR",
+        }
+    else:
+        temp, status, icon = get_current_weather(API_KEY, LOCATION)
 
-# wind speed
-wind_speed = html_data("span[data-testid='Wind']").text().split("\n")[1]
-wind_text = f"  {wind_speed}"
-# print(wind_text)
+        if temp is None:
+            # Handle error
+            out_data = {
+                "text": "Error",
+                "alt": "Error fetching weather data",
+                "tooltip": "Error fetching weather data",
+                "class": "ERROR",
+            }
+        else:
+            # Format tooltip text for Waybar
+            tooltip_text = str.format(
+                "{}\n{}\n{}",
+                f'<span size="x-large">{temp:.0f}°</span>',
+                f"<big>{status}</big>",
+                f"<small>Current condition</small>",
+            )
 
-# humidity
-humidity = html_data("span[data-testid='PercentageValue']").text()
-humidity_text = f"  {humidity}"
-# print(humidity_text)
+            # Waybar module output data
+            out_data = {
+                "text": f"{icon} {temp:.0f}°",  # Display icon and temperature
+                "alt": status,  # Weather condition text
+                "tooltip": tooltip_text,  # Full tooltip with additional data
+                "class": status,  # Needed for coloring by waybar style
+            }
 
-# visibility
-visbility = html_data("span[data-testid='VisibilityValue']").text()
-visbility_text = f"  {visbility}"
-# print(visbility_text)
-
-# air quality index
-air_quality_index = html_data("text[data-testid='DonutChartValue']").text()
-# print(air_quality_index)
-
-# hourly rain prediction
-prediction = html_data("section[aria-label='Hourly Forecast']")(
-    "div[data-testid='SegmentPrecipPercentage'] > span"
-).text()
-prediction = prediction.replace("Chance of Rain", "")
-prediction = f"\n\n    (hourly) {prediction}" if len(prediction) > 0 else prediction
-# print(prediction)
-
-# tooltip text
-tooltip_text = str.format(
-    "{}\n{}\n{}",
-    f'<big>{icon}</big>  <span size="xx-large">{temp}</span>',
-    f"<big>{status}</big>",
-    f"<small>{temp_feel_text}</small>",
-)
-
-# print waybar module data
-out_data = {
-    "text": f"{icon} {temp}",
-    "alt": status,
-    "tooltip": tooltip_text,
-    "class": status_code,
-}
+# Print Waybar JSON output
 print(json.dumps(out_data))
