@@ -52,7 +52,7 @@
 
     "custom/weather": {
         "exec": "python ~/.config/waybar/scripts/weather.py",
-        "restart-interval": 300,
+        "restart-interval": 60,
         "return-type": "json",
         "on-click": "gnome-weather"
     },
