@@ -51,3 +51,18 @@ I use a combination of Windows, MacOS, and custom keybinds.
 | <kbd>Super</kbd> + <kbd>Right Click</kbd>          | resize window                      |
 
 \* # represents a number (1 - 10), use 0 for workspace 10.
+
+## Helpful Resources
+
+### MATLAB Setup
+
+-   [Blog post](https://heziah.top/posts/notion/arch-linux-wayland-an-zhuang-matlab/) on fixing wayland related issues for MATLAB.
+
+### Secure Boot + GRUB
+
+-   For [setting up GRUB with secure boot](https://www.reddit.com/r/archlinux/comments/10pq74e/my_easy_method_for_setting_up_secure_boot_with/) (needed for dual booting Windows 11).
+
+### Fonts
+
+-   Install fonts: `sudo pacman -Syu $(pacman -Ssq ttf- | grep -v ttf-nerd-fonts-symbols-mono)`
+-   [Nerd Fonts cheat sheet](https://www.nerdfonts.com/cheat-sheet)
