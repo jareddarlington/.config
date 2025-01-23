@@ -1,6 +1,6 @@
 # Arch Linux and Hyprland Config Files
 
-Config files for my desktop Linux system, which I use for school and coding.
+Config files for my desktop system, which I use for school and coding.
 
 ## Current State (1/22/25)
 
