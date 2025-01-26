@@ -2,10 +2,10 @@
 
 Config files for my desktop system, which I use for school and coding.
 
-## Current State (1/22/25)
+## Screenshots (1/22/25)
 
-<img src="./assets/state-1.png"/>
-<img src="./assets/state-2.png"/>
+<img src="./screenshots/1.png"/>
+<img src="./screenshots/2.png"/>
 
 ## What I Use
 
