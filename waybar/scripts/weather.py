@@ -85,13 +85,13 @@ if __name__ == "__main__":
             # Format tooltip text for Waybar
             tooltip_text = str.format(
                 "{}\n{}",
-                f'<span size="x-large">{icon} {temp:.0f}°</span>',
+                f'<span size="x-large">{temp:.0f}°</span>',
                 f"<big>{status}</big>",
             )
 
             # Waybar module output data
             out_data = {
-                "text": f"{icon} {temp:.0f}°",  # Display icon and temperature
+                "text": f"{temp:.0f}°",  # Display icon and temperature
                 "alt": status,  # Weather condition text
                 "tooltip": tooltip_text,  # Full tooltip with additional data
                 "class": status,  # Needed for coloring by waybar style
