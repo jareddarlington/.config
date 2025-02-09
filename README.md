@@ -2,7 +2,7 @@
 
 Config files for my desktop system, which I use for school and coding.
 
-## Screenshots (1/22/25)
+## Screenshots (2/9/25)
 
 <img src="./screenshots/1.png"/>
 <img src="./screenshots/2.png"/>
